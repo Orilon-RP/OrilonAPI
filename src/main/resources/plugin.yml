@@ -1,0 +1,5 @@
+name: API
+version: '${version}'
+main: fr.orilon.api.API
+authors: [ Twah2em ]
+description: L'api d'orilon

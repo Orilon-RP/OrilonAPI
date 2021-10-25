@@ -4,6 +4,10 @@ public class UserInfos {
     private Rank userRank;
     private int money;
 
+    public UserInfos() {
+        this(null, 0);
+    }
+
     public UserInfos(Rank rank, int money) {
         this.userRank = rank;
         this.money = money;

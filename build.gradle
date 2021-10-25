@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id 'com.github.johnrengelman.shadow' version '6.1.0'
-    id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '4.0.4'
+    id 'maven'
 }
 
 group = 'fr.orilon'
@@ -23,7 +23,7 @@ repositories {
 
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
-    implementation 'fr.mrmicky:FastInv:3.0.3'
+    implementation 'com.github.MrMicky-FR:FastInv:3.0.3'
 }
 
 shadowJar {

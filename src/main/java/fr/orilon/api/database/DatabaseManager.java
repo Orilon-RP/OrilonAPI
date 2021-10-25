@@ -5,8 +5,6 @@ import java.sql.ResultSet;
 import java.util.function.Consumer;
 
 public interface DatabaseManager {
-    void connect(String host, String username, String password, int port);
-
     void disconnect();
 
     void createTables();

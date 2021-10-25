@@ -9,5 +9,9 @@ public interface API {
 
     DatabaseManager getDatabaseManager();
 
+    void setDatabaseManager(DatabaseManager databaseManager);
+
     UserManager getUserManager();
+
+    void setUserManager(UserManager userManager);
 }

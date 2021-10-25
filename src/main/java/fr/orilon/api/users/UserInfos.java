@@ -4,9 +4,9 @@ public class UserInfos {
     private Rank userRank;
     private int money;
 
-    public UserInfos() {
-        userRank = null;
-        money = 0;
+    public UserInfos(Rank rank, int money) {
+        this.userRank = rank;
+        this.money = money;
     }
 
     public Rank getUserRank() {

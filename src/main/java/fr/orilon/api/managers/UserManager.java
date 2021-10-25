@@ -17,7 +17,7 @@ public interface UserManager {
 
     void deleteUser(String playerName);
 
-    void updateUser(Consumer<User> userConsumer);
+    void updateUser(User newUser);
 
     User getUser(String playerName);
 

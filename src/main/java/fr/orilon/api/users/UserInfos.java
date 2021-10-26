@@ -1,24 +1,34 @@
 package fr.orilon.api.users;
 
 public class UserInfos {
-    private Rank userRank;
+    private Rank rank;
+    private Job job;
     private int money;
 
     public UserInfos() {
-        this(null, 0);
+        this(null, null, 0);
     }
 
-    public UserInfos(Rank rank, int money) {
-        this.userRank = rank;
+    public UserInfos(Rank rank, Job job, int money) {
+        this.rank = rank;
+        this.job = job;
         this.money = money;
     }
 
-    public Rank getUserRank() {
-        return userRank;
+    public Rank getRank() {
+        return rank;
     }
 
-    public void setUserRank(Rank userRank) {
-        this.userRank = userRank;
+    public void setRank(Rank rank) {
+        this.rank = rank;
+    }
+
+    public Job getJob() {
+        return job;
+    }
+
+    public void setJob(Job job) {
+        this.job = job;
     }
 
     public int getMoney() {

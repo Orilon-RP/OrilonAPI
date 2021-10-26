@@ -17,11 +17,11 @@ public class User {
         return player;
     }
 
-    public String getPlayerName() {
+    public String getName() {
         return player.getName();
     }
 
-    public UUID getPlayerUUID() {
+    public UUID getUniqueId() {
         return player.getUniqueId();
     }
 

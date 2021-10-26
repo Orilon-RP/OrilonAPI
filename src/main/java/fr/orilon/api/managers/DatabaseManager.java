@@ -1,4 +1,4 @@
-package fr.orilon.api.database;
+package fr.orilon.api.managers;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

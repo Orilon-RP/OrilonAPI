@@ -1,7 +1,5 @@
 package fr.orilon.api.users.ranks;
 
-import fr.orilon.api.users.Rank;
-
 import java.util.HashMap;
 import java.util.Map;
 

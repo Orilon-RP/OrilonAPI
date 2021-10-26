@@ -1,4 +1,4 @@
-package fr.orilon.api.users;
+package fr.orilon.api.users.jobs;
 
 import org.bukkit.ChatColor;
 

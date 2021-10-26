@@ -1,6 +1,5 @@
 package fr.orilon.api.users.ranks;
 
-import fr.orilon.api.users.Rank;
 import org.bukkit.ChatColor;
 
 public class HelperRank implements Rank {

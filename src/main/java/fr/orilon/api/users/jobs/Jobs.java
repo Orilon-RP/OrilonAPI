@@ -1,7 +1,5 @@
 package fr.orilon.api.users.jobs;
 
-import fr.orilon.api.users.Job;
-
 import java.util.HashMap;
 import java.util.Map;
 

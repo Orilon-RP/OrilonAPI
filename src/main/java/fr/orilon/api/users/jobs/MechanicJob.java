@@ -1,6 +1,5 @@
 package fr.orilon.api.users.jobs;
 
-import fr.orilon.api.users.Job;
 import org.bukkit.ChatColor;
 
 public class MechanicJob implements Job {

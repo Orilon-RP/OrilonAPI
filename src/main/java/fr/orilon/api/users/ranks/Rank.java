@@ -1,4 +1,4 @@
-package fr.orilon.api.users;
+package fr.orilon.api.users.ranks;
 
 import org.bukkit.ChatColor;
 

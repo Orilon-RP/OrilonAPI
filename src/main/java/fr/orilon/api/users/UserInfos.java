@@ -1,5 +1,8 @@
 package fr.orilon.api.users;
 
+import fr.orilon.api.users.jobs.Job;
+import fr.orilon.api.users.ranks.Rank;
+
 public class UserInfos {
     private Rank rank;
     private Job job;

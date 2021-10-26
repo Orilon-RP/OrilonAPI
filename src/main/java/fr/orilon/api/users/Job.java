@@ -9,5 +9,6 @@ public interface Job {
 
     String getColorizedName();
 
-    int getPrice();
+    // on verra après
+    // int getPrice();
 }

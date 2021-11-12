@@ -1,7 +1,9 @@
 package fr.orilon.api.users;
 
 import fr.orilon.api.users.jobs.Job;
+import fr.orilon.api.users.jobs.Jobs;
 import fr.orilon.api.users.ranks.Rank;
+import fr.orilon.api.users.ranks.Ranks;
 
 public class UserInfos {
     private Rank rank;
@@ -9,7 +11,7 @@ public class UserInfos {
     private int money;
 
     public UserInfos() {
-        this(null, null, 0);
+        this(Ranks.PLAYER.getRank(), Jobs.CITIZEN.getJob(), 0);
     }
 
     public UserInfos(Rank rank, Job job, int money) {

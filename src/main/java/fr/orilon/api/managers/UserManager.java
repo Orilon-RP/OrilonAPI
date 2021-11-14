@@ -6,21 +6,21 @@ import org.bukkit.entity.Player;
 import java.util.UUID;
 
 public interface UserManager {
-    void createUser(Player player);
+    void createUserOnDatabase(Player player);
 
-    void createUser(User user);
+    void createUserOnDatabase(User user);
 
-    void deleteUser(User user);
+    void deleteUserFromDatabase(User user);
 
-    void deleteUser(UUID uuid);
+    void deleteUserFromDatabase(UUID uuid);
 
-    void deleteUser(String playerName);
+    void deleteUserFromDatabase(String playerName);
 
-    void updateUser(User newUser);
+    void updateUserFromDatabase(User newUser);
 
-    User getUser(String playerName);
+    User getUserFromDatabase(String playerName);
 
-    User getUser(UUID uuid);
+    User getUserFromDatabase(UUID uuid);
 
-    User getUser(Player player);
+    User getUserFromDatabase(Player player);
 }

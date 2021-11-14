@@ -6,9 +6,9 @@ import org.bukkit.entity.Player;
 import java.util.UUID;
 
 public interface UserManager {
-    void createUserOnDatabase(Player player);
+    void createUserInDatabase(Player player);
 
-    void createUserOnDatabase(User user);
+    void createUserInDatabase(User user);
 
     void deleteUserFromDatabase(User user);
 

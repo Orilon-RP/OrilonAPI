@@ -70,7 +70,7 @@ public class ItemBuilder {
     @SuppressWarnings("deprecation")
     public ItemBuilder setStainedGlassPaneColor(DyeColor color) {
         if (this.itemStack.getType() == Material.STAINED_GLASS_PANE) {
-            this.itemStack.setDurability(color.getDyeData());
+            this.itemStack.setDurability(color.getWoolData());
         } else {
             throw new IllegalArgumentException("L'item n'est pas une vitre !");
         }

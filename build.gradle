@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'com.github.johnrengelman.shadow' version '4.0.4'
     id 'maven'
 }
 
@@ -19,9 +18,4 @@ repositories {
 
 dependencies {
     compileOnly 'com.destroystokyo.paper:paper-api:1.12.2-R0.1-SNAPSHOT'
-    implementation 'com.github.MrMicky-FR:FastInv:3.0.3'
-}
-
-shadowJar {
-    relocate 'fr.mrmicky.fastinv', 'fr.orilon.api.utils'
 }

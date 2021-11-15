@@ -1,12 +1,12 @@
 package fr.orilon.api.utils;
 
+import net.kyori.adventure.text.Component;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
-import org.bukkit.material.Wool;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -32,16 +32,16 @@ public class ItemBuilder {
     }
 
     public ItemBuilder setName(String name) {
-        this.itemMeta.setDisplayName(name);
+        this.itemMeta.displayName(Component.text(name));
         return this;
     }
 
-    public ItemBuilder setLore(String... lore) {
+    public ItemBuilder setLore(Component... lore) {
         return this.setLore(Arrays.asList(lore));
     }
 
-    public ItemBuilder setLore(List<String> lore) {
-        this.itemMeta.setLore(lore);
+    public ItemBuilder setLore(List<Component> lore) {
+        this.itemMeta.lore(lore);
         return this;
     }
 
@@ -67,31 +67,12 @@ public class ItemBuilder {
         return this.removeEnchants(enchantment);
     }
 
-    @SuppressWarnings("deprecation")
-    public ItemBuilder setStainedGlassPaneColor(DyeColor color) {
-        if (this.itemStack.getType() == Material.STAINED_GLASS_PANE) {
-            this.itemStack.setDurability(color.getWoolData());
-        } else {
-            throw new IllegalArgumentException("L'item n'est pas une vitre !");
-        }
-        return this;
-    }
-
     public ItemBuilder setColorArmor(DyeColor color) {
         if (this.itemStack.getType() == Material.LEATHER_BOOTS || this.itemStack.getType() == Material.LEATHER_LEGGINGS ||
                 this.itemStack.getType() == Material.LEATHER_CHESTPLATE || this.itemStack.getType() == Material.LEATHER_HELMET) {
             return this.setItemMeta(LeatherArmorMeta.class, leatherArmorMeta -> leatherArmorMeta.setColor(color.getColor()));
         } else {
             throw new IllegalArgumentException("L'item n'est pas une armure en cuir !");
-        }
-    }
-
-    public ItemBuilder setWoolColor(DyeColor color) {
-        if (this.itemStack.getType() == Material.WOOL) {
-            ((Wool) this.itemStack.getItemMeta()).setColor(color);
-            return this;
-        } else {
-            throw new IllegalArgumentException("L'item n'est pas une laine !");
         }
     }
 

@@ -54,4 +54,15 @@ public class JobTaskInfos {
     public Task getActualTask() {
         return actualTask;
     }
+
+    @Override
+    public String toString() {
+        return "JobTaskInfos{" +
+                "jobTask=" + jobTask +
+                ", uuid=" + uuid +
+                ", end=" + end +
+                ", tasks=" + tasks +
+                ", actualTask=" + actualTask +
+                '}';
+    }
 }

@@ -1,12 +1,9 @@
 package fr.orilon.api.users.jobs;
 
 import fr.orilon.api.API;
-import fr.orilon.api.users.jobs.tasks.Task;
+import fr.orilon.api.users.jobs.tasks.JobTaskInfos;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public interface Job {
     String getName();
@@ -15,8 +12,8 @@ public interface Job {
 
     String getColorizedName();
 
-    default List<Task> getTasks(Player player, API api) {
-        return new ArrayList<>();
+    default JobTaskInfos getTaskInfos(Player player, API api) {
+        return null;
     }
 
     // on verra après

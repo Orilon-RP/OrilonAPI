@@ -4,8 +4,8 @@ plugins {
 }
 
 group = 'fr.orilon'
-version = '1.0.0'
-archivesBaseName = "OrilonAPI"
+version = '1.2.3'
+archivesBaseName = "Orilon-API"
 
 repositories {
     maven {
@@ -16,3 +16,35 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT")
 }
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = "fr.orilon"
+            artifactId = "Orilon-API"
+            version = "1.2.3-SNAPSHOT"
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "https://maven.pkg.jetbrains.space/orilon/p/rglkobmx4fjlem8dwuiw/orilon-api"
+            credentials {
+                username = spaceUsername
+                password = spacePassword
+            }
+        }
+    }
+}
+
+def targetJavaVersion = 16
+java {
+    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
+    sourceCompatibility = javaVersion
+    targetCompatibility = javaVersion
+    if (JavaVersion.current() < javaVersion) {
+        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+    }
+}
+
+compileJava.options.encoding("UTF-8")

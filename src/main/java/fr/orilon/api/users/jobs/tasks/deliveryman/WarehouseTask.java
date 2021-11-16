@@ -13,26 +13,33 @@ import java.util.Random;
 
 public class WarehouseTask extends Task {
     public WarehouseTask(Player player, JobTaskInfos jobTaskInfos, API api) {
-        super(player.getWorld(), new Cuboid(new Location(player.getWorld(), 444, 47, 138), new Location(player.getWorld(), 444, 44, 142)), false,
+        super(player.getWorld(), new Cuboid(new Location(player.getWorld(), 454, 65, 163), new Location(player.getWorld(), 451, 62, 166)), false,
                 "entrepot", jobTaskInfos);
+
+        this.setName("§7§oAllez chercher un colis à x: 452, y: 63, z: 160");
 
         this.setRunnable(new BukkitRunnable() {
             @Override
             public void run() {
                 if (!destination.hasPlayerInside(player)) {
-                    player.sendActionBar(Component.text("§6Allez à x: 441, y: 44, z: 140 !"));
+                    player.sendActionBar(Component.text("§6Allez à x: 452, y: 63, z: 160 !"));
                 } else {
                     player.sendMessage("§aVous êtes bien arrivé !");
                     this.cancel();
                     setEnd(true);
 
                     final Cuboid[] cuboids = {
-                            new Cuboid(new Location(player.getWorld(), 364, 45, 3), new Location(player.getWorld(), 364, 45, 3))
+                            new Cuboid(new Location(player.getWorld(), 451, 65, 172), new Location(player.getWorld(), 448, 62, 175)),
+                            new Cuboid(new Location(player.getWorld(), 450, 65, 181), new Location(player.getWorld(), 447, 62, 184)),
                     };
 
                     final Cuboid cuboid = cuboids[new Random().nextInt(cuboids.length)];
 
-                    new DeliverTask(player, cuboid, jobTaskInfos).getRunnable().runTaskTimerAsynchronously(api.getPlugin(), 0, 20);
+                    final DeliverTask deliverTask = new DeliverTask(player, cuboid, jobTaskInfos);
+                    jobTaskInfos.setActualTask(deliverTask);
+                    jobTaskInfos.getTasks().add(deliverTask);
+
+                    deliverTask.getRunnable().runTaskTimerAsynchronously(api.getPlugin(), 0, 20);
                 }
             }
         });

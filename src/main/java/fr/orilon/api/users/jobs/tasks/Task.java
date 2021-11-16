@@ -37,6 +37,10 @@ public abstract class Task {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public BukkitRunnable getRunnable() {
         return bukkitRunnable;
     }

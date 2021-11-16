@@ -1,6 +1,7 @@
 package fr.orilon.api.users.jobs;
 
 import fr.orilon.api.API;
+import fr.orilon.api.users.jobs.tasks.JobTaskInfos;
 import fr.orilon.api.users.jobs.tasks.Task;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -24,7 +25,7 @@ public class CitizenJob implements Job {
     }
 
     @Override
-    public List<Task> getTasks(Player player, API api) {
+    public JobTaskInfos getTaskInfos(Player player, API api) {
         return null;
     }
 }

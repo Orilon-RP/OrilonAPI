@@ -24,7 +24,7 @@ public interface API {
 
     User getUser(UUID uuid);
 
-    List<JobTaskInfos> getJobTaskInfos();
+    List<JobTaskInfos> getJobTasksInfos();
 
-    JobTaskInfos getPlayerJobTaskInfos();
+    JobTaskInfos getPlayerJobTaskInfos(UUID uuid);
 }

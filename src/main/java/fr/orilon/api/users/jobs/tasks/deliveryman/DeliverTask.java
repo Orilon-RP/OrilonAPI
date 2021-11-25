@@ -18,7 +18,6 @@ public class DeliverTask extends Task {
         this.setRunnable(new BukkitRunnable() {
             @Override
             public void run() {
-                System.out.println("lala");
                 if (!cuboid.hasPlayerInside(player)) {
                     player.sendActionBar(Component.text("§6Allez livrer le coli à x: " + cuboid.getXmax() + ", y: " + cuboid.getYmax() + ", z: " + cuboid.getZmax()));
                 } else {

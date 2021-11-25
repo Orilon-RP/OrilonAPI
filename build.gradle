@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'fr.orilon'
-version = '1.2.3'
+version = '1.2.4'
 archivesBaseName = "Orilon-API"
 
 repositories {
@@ -22,7 +22,7 @@ publishing {
         maven(MavenPublication) {
             groupId = "fr.orilon"
             artifactId = "Orilon-API"
-            version = "1.2.3-SNAPSHOT"
+            version = "1.2.4-SNAPSHOT"
             from components.java
         }
     }

@@ -29,8 +29,10 @@ public class DeliveryManJob implements Job {
         jobTaskInfos.setJobTask(() -> {
             player.sendMessage("§6Allez chercher un colis à l'entrepôt ! §7§o(x: 452, y: 63, z: 160)");
             final WarehouseTask warehouseTask = new WarehouseTask(player, jobTaskInfos, api);
+
             jobTaskInfos.getTasks().add(warehouseTask);
             jobTaskInfos.setActualTask(warehouseTask);
+            api.getJobTasksInfos().add(jobTaskInfos);
 
             warehouseTask.getRunnable().runTaskTimerAsynchronously(api.getPlugin(), 0, 20);
         });

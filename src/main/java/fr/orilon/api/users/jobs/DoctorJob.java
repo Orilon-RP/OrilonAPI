@@ -2,7 +2,7 @@ package fr.orilon.api.users.jobs;
 
 import org.bukkit.ChatColor;
 
-public class DoctorJob implements Job {
+public class DoctorJob implements IJob {
     @Override
     public String getName() {
         return "Médecin";

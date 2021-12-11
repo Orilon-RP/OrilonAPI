@@ -2,7 +2,7 @@ package fr.orilon.api.users.jobs;
 
 import org.bukkit.ChatColor;
 
-public class PoliceJob implements Job {
+public class PoliceJob implements IJob {
     @Override
     public String getName() {
         return "Police";

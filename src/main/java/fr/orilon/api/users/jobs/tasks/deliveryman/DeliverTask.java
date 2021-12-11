@@ -8,6 +8,8 @@ import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.util.Random;
+
 public class DeliverTask extends Task {
 
     public DeliverTask(Player player, Cuboid cuboid, JobTaskInfos jobTaskInfos, API api) {
@@ -26,6 +28,8 @@ public class DeliverTask extends Task {
                     jobTaskInfos.setActualTask(null);
 
                     player.sendMessage("§aMission finie !");
+                    // entre 40 et 50 $
+                    api.getUser(player.getUniqueId()).getInfos().setMoney(api.getUser(player.getUniqueId()).getInfos().getMoney() + new Random().nextInt(11) + 40);
 
                     api.getJobTasksInfos().remove(jobTaskInfos);
                 }

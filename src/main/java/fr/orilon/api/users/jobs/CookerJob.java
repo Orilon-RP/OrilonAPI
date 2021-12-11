@@ -2,7 +2,7 @@ package fr.orilon.api.users.jobs;
 
 import org.bukkit.ChatColor;
 
-public class CookerJob implements Job {
+public class CookerJob implements IJob {
     @Override
     public String getName() {
         return "Cuisinier";
@@ -10,7 +10,7 @@ public class CookerJob implements Job {
 
     @Override
     public ChatColor getColor() {
-        return ChatColor.BOLD;
+        return ChatColor.GOLD;
     }
 
     @Override

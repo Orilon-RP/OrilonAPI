@@ -2,13 +2,10 @@ package fr.orilon.api.users.jobs;
 
 import fr.orilon.api.API;
 import fr.orilon.api.users.jobs.tasks.JobTaskInfos;
-import fr.orilon.api.users.jobs.tasks.Task;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
-import java.util.List;
-
-public class CitizenJob implements Job {
+public class CitizenJob implements IJob {
     @Override
     public String getName() {
         return "Citoyen";

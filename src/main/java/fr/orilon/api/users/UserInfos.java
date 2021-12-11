@@ -1,5 +1,6 @@
 package fr.orilon.api.users;
 
+import fr.orilon.api.users.jobs.IJob;
 import fr.orilon.api.users.jobs.Job;
 import fr.orilon.api.users.jobs.Jobs;
 import fr.orilon.api.users.ranks.Rank;

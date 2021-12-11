@@ -6,7 +6,7 @@ import fr.orilon.api.users.jobs.tasks.deliveryman.WarehouseTask;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
-public class DeliveryManJob implements Job {
+public class DeliveryManJob implements IJob {
     @Override
     public String getName() {
         return "Livreur";
@@ -14,7 +14,7 @@ public class DeliveryManJob implements Job {
 
     @Override
     public ChatColor getColor() {
-        return ChatColor.BOLD;
+        return ChatColor.GOLD;
     }
 
     @Override

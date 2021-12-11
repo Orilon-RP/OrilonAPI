@@ -1,21 +1,24 @@
 package fr.orilon.api.users.jobs;
 
-import fr.orilon.api.API;
 import fr.orilon.api.users.jobs.tasks.JobTaskInfos;
 import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
 
-public interface Job {
-    String getName();
+public record Job(String name, ChatColor color,
+                  JobTaskInfos jobTaskInfos) {
 
-    ChatColor getColor();
-
-    String getColorizedName();
-
-    default JobTaskInfos getTaskInfos(Player player, API api) {
-        return null;
+    public String getName() {
+        return name;
     }
 
-    // on verra après
-    // int getPrice();
+    public ChatColor getColor() {
+        return color;
+    }
+
+    public String getColorizedName() {
+        return color + name;
+    }
+
+    public JobTaskInfos getJobTaskInfos() {
+        return jobTaskInfos;
+    }
 }
